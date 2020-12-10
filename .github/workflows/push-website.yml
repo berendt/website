@@ -1,0 +1,30 @@
+---
+name: Push website
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - master
+
+jobs:
+
+  push-website:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+      - run: hugo --minify
+      - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          local-dir: public/
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          security: strict
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}

@@ -1,0 +1,15 @@
+<head>
+  {{ partial "meta.html" . }}
+
+  <meta name="description" content="Private website of Christian Berendt" />
+
+  <link rel="canonical" href="https://berendt.io">
+
+  <title>{{ upper .Title }}</title>
+
+  {{ partial "stylesheet.html" . }}
+  {{ partial "jsonld.html" . }}
+<!--
+  {{ partial "favicon.html" . }}
+-->
+</head>

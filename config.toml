@@ -1,0 +1,15 @@
+baseURL = "https://berendt.io/"
+defaultContentLanguage = "en"
+enableEmoji = true
+enableGitInfo = true
+languageCode = "en-us"
+theme = "berendt"
+title = "Private website of Christian Berendt"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[sitemap]
+changefreq = "daily"
+priority = 1
+filename = "sitemap.xml"

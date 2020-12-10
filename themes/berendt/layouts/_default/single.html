@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+
+{{- partial "head.html" . -}}
+
+<body>
+{{- partial "header.html" . -}}
+
+<main>
+<div style="margin-bottom: 60px; margin-top: 60px; padding: 30px; max-width: 1024px;">
+{{ .Content }}
+</div>
+</main>
+
+{{- partial "footer.html" . -}}
+</body>
+</html>

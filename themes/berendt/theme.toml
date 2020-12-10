@@ -1,0 +1,12 @@
+name = "berendt"
+license = "MIT"
+licenselink = "https://github.com/berendt/website/blob/master/LICENSE"
+description = "Hugo theme of the private website of Christian Berendt"
+homepage = "https://github.com/berendt/website"
+tags = ["minimal", "clean", "simple"]
+features = []
+min_version = "0.77.0"
+
+[author]
+  name = "Christian Berendt"
+  homepage = "https://berendt.io"
